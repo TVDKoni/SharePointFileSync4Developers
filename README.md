@@ -8,6 +8,7 @@ Installation is not more than downloading the PowerShell script [SharePointLiveS
 * A SharePoint Online site where you have write access to a document library
 * At least PowerShell version 3 is required
 * Microsoft.SharePointOnline.CSOM which is downloaded automatically from the script
+* A reference to System.IO.Compression.FileSystem to unpack the NuGet package
 
 ## Usage
 Start a PowerShell session and change to the directory where you downloaded the script SharePointLiveSync.ps1. Enter the following command:
