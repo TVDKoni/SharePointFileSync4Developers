@@ -18,6 +18,9 @@ Start a PowerShell session and change to the directory where you downloaded the 
 ```
 
 It is very important that you source the script with a leading point and a space to get defined functions into the actual session!
-By hitting return, the script is registering FileSystemWatchers onto the directory specified by the parameter srcFolder. Every change within that folder or any subfolder will be immediatly reflected into the SharePoint Online document library specified by the parameter docLibName.
+By hitting return, the script is registering FileSystemWatchers onto the directory specified by the parameter srcFolder. Every change within that folder or any subfolder will be immediately reflected into the SharePoint Online document library specified by the parameter docLibName.
 
+## Known issues
+* There are not yet all file system operations supported like renaming folders. We are working on it
+* Some file system operations initiate multiple file uploads. We don't have yet a solution. If you have an idea how to solve, please inform us
 
