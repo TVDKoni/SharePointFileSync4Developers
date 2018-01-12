@@ -11,10 +11,16 @@ Installation is not more than downloading the PowerShell script [SharePointLiveS
 * A reference to System.IO.Compression.FileSystem to unpack the NuGet package
 
 ## Usage
-Start a PowerShell session and change to the directory where you downloaded the script SharePointLiveSync.ps1. Enter the following command:
+Start a PowerShell session and change to the directory where you downloaded the script SharePointLiveSync.ps1.
 
+To sync to a document library, enter the following command:
 ```PowerShell
 . .\SharePointLiveSync.ps1 -srcFolder "C:\Data\Example" -serverUrl "https://yourtenant.sharepoint.com" -siteUrl "/sites/yoursite" -docLibName "Style Library"
+```
+
+To sync to the masterpage library, enter the following command:
+```PowerShell
+. .\SharePointLiveSync.ps1 -srcFolder "C:\Data\Example" -serverUrl "https://yourtenant.sharepoint.com" -siteUrl "/sites/yoursite" -catalogName "masterpage"
 ```
 
 It is very important that you source the script with a leading point and a space to get defined functions into the actual session!
@@ -23,4 +29,5 @@ By hitting return, the script is registering FileSystemWatchers onto the directo
 ## Known issues
 * There are not yet all file system operations supported like renaming folders. We are working on it
 * Some file system operations initiate multiple file uploads. We don't have yet a solution. If you have an idea how to solve, please inform us
+* After creating a new file, the watcher stopps working. You have to unregister and register new in such situation
 
